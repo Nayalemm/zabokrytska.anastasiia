@@ -1,0 +1,25 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    transition: 0.5s;
+    padding: 50px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.color {
+    background-color: lightblue;
+    color: darkblue;
+}
