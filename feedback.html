@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма зворотного зв’язку</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Форма зворотного зв’язку</h1>
+
+        <form id="feedbackForm">
+            <input type="text" id="name" placeholder="Ваше ім’я">
+
+            <input type="email" id="email" placeholder="Ваш email">
+
+            <textarea id="message" placeholder="Ваше повідомлення"></textarea>
+
+            <button type="submit">Надіслати</button>
+        </form>
+
+        <p id="result"></p>
+    </div>
+
+    <script src="feedback.js"></script>
+</body>
+</html>

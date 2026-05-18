@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета користувача</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Анкета користувача</h1>
+
+    <form id="surveyForm">
+
+        <input type="text" id="name" placeholder="Ім’я">
+
+        <input type="number" id="age" placeholder="Вік">
+
+        <p>Стать:</p>
+
+        <label>
+            <input type="radio" name="gender" value="Чоловік">
+            Чоловік
+        </label>
+
+        <label>
+            <input type="radio" name="gender" value="Жінка">
+            Жінка
+        </label>
+
+        <p>Хобі:</p>
+
+        <label>
+            <input type="checkbox" value="Спорт" class="hobby">
+            Спорт
+        </label>
+
+        <label>
+            <input type="checkbox" value="Музика" class="hobby">
+            Музика
+        </label>
+
+        <label>
+            <input type="checkbox" value="Ігри" class="hobby">
+            Ігри
+        </label>
+
+        <textarea id="about" placeholder="Короткий опис"></textarea>
+
+        <button type="submit">Відправити</button>
+
+    </form>
+
+    <div id="output"></div>
+</div>
+
+<script src="survey.js"></script>
+</body>
+</html>
