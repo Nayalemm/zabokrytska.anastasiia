@@ -1,0 +1,73 @@
+<?php
+
+if (isset($_POST['language'])) {
+    $language = $_POST['language'];
+    setcookie("language", $language, time() + (86400 * 30), "/");
+} elseif (isset($_COOKIE['language'])) {
+    $language = $_COOKIE['language'];
+} else {
+    $language = "uk";
+}
+
+switch ($language) {
+    case "en":
+        setlocale(LC_TIME, 'en_US.UTF-8');
+        $lang = "English";
+        break;
+
+    case "de":
+        setlocale(LC_TIME, 'de_DE.UTF-8');
+        $lang = "Deutsch";
+        break;
+
+    case "fr":
+        setlocale(LC_TIME, 'fr_FR.UTF-8');
+        $lang = "Français";
+        break;
+
+    default:
+        setlocale(LC_TIME, 'uk_UA.UTF-8');
+        $lang = "Українська";
+        break;
+}
+
+$ip = $_SERVER['REMOTE_ADDR'];
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PHP Practice</title>
+</head>
+
+<body>
+
+<h2>Select language</h2>
+
+<form method="POST">
+<select name="language">
+<option value="uk">Українська</option>
+<option value="en">English</option>
+<option value="de">Deutsch</option>
+<option value="fr">Français</option>
+</select>
+
+<button type="submit">Save</button>
+</form>
+
+<h3>Current language: <?php echo $lang; ?></h3>
+
+<p>
+Date and time:
+<?php echo strftime("%A, %d %B %Y %H:%M:%S"); ?>
+</p>
+
+<p>
+Your IP:
+<?php echo $ip; ?>
+</p>
+
+</body>
+</html>
