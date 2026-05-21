@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>НСД</title>
+</head>
+<body>
+
+<script>
+    let a = Number(prompt("Введіть перше число"));
+    let b = Number(prompt("Введіть друге число"));
+
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    console.log("НСД =", a);
+</script>
+
+</body>
+</html>
